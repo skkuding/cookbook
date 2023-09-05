@@ -17,18 +17,16 @@
 | 3 주차  | [HTML, CSS](./1.%20HTML,%20CSS.md)             | 추가 예정 |
 | 4 주차  | [JavaScript](./2.%20JavaScript.md)             | 추가 예정 |
 | 5 주차  | [TypeScript](./3.%20TypeScript.md)             | 추가 예정 |
-| 6 주차  | [React](./4.%20React.md)                       | 추가 예정 |
+| 6 주차  | 중간고사 화이팅 😄                             | 추가 예정 |
 | 7 주차  | 중간고사 화이팅 😄                             | 추가 예정 |
 | 8 주차  | 중간고사 화이팅 😄                             | 추가 예정 |
 | 9 주차  | [React](./4.%20React.md)                       | 추가 예정 |
-| 10 주차 | [Data Fetching](./7.%20Data%20Fetching.md)     | 추가 예정 |
-| 11 주차 | [React Ecosystem](./8.%20React%20Ecosystem.md) | 추가 예정 |
-| 12 주차 | [Tailwind CSS](./6.%20Tailwind%20CSS.md)       | 추가 예정 |
-| 13 주차 | [Next.js](./5.%20Next.js.md)                   | 추가 예정 |
-| 14 주차 | [Next.js](./5.%20Next.js.md)                   | 추가 예정 |
+| 10 주차 | [Data Fetching](./5.%20Data%20Fetching.md)     | 추가 예정 |
+| 11 주차 | [React Ecosystem](./6.%20React%20Ecosystem.md) | 추가 예정 |
+| 12 주차 | [Tailwind CSS](./7.%20Tailwind%20CSS.md)       | 추가 예정 |
+| 13 주차 | [Next.js](./8.%20Next.js.md)                   | 추가 예정 |
+| 14 주차 | 기말고사 화이팅 😄                             | 추가 예정 |
 | 15 주차 | 기말고사 화이팅 😄                             | 추가 예정 |
 | 16 주차 | 기말고사 화이팅 😄                             | 추가 예정 |
-
-> 시험 기간 전 주차와 시험 기간에는 쉬어가요!
 
 배울 게 많아서 힘들 수 있어요! 그래도 끝까지 완주해 보아요! 🏃‍♀️
