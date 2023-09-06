@@ -9,3 +9,6 @@
 - 인프라 프로비저닝 (Terraform)
 
 간단한 서버를 만들어보고, Docker로 가상화 시킨 다음 AWS에 배포할 거예요. 이 과정은 GitHub Action으로 자동화한 다음, Terraform으로 인프라를 프로비저닝할 거예요.
+
+더 많은 내용을 배워보고 싶은 분들은 아래의 DevOps Roadmap을 참고해보세요.
+https://roadmap.sh/devops
