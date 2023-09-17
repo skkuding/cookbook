@@ -1,0 +1,208 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OS Information</title>
+    <style>
+      body {
+        height: 100%;
+        margin: 0;
+        font-family: 'Inter', 'Noto Sans KR', system-ui, -apple-system,
+          BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+          'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+      .login {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(4px);
+        transition: all 0.5s ease-in-out;
+      }
+      .login > form {
+        width: 20rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+      }
+      .login > form > a {
+        background-color: #fff;
+        opacity: 0.75;
+        padding: 0 0.5rem;
+        cursor: pointer;
+        text-decoration: underline;
+      }
+      input {
+        width: 100%;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        border: none;
+        font-size: 1rem;
+      }
+      button {
+        width: 100%;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        font-size: 1rem;
+        border: none;
+        background-color: #3581fa;
+        color: #fff;
+        cursor: pointer;
+      }
+      button:hover {
+        opacity: 0.8;
+      }
+      .hide {
+        visibility: hidden;
+        opacity: 0;
+      }
+      .wrapper {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .title {
+        font-size: 2.5rem;
+        background: -webkit-linear-gradient(315deg, #42d392 25%, #647eff);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .sub-title {
+        font-size: 1.25rem;
+      }
+      .card {
+        border-radius: 16px;
+        padding: 1rem 2rem;
+        background-color: #eee;
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      let formType = 'login'
+
+      const load = async () => {
+        try {
+          const data = await fetch('/os').then((res) => res.json())
+          document.querySelector('.type').innerText = data.type
+          document.querySelector('.hostname').innerText = data.hostname
+          document.querySelector('.cpu-num').innerText = data.cpu_num
+          document.querySelector('.total-mem').innerText = data.total_mem
+        } catch (error) {
+          console.error(error)
+          alert('⚠️ 서버에서 데이터를 가져올 수 없어요!\n' + error.message)
+        }
+      }
+
+      const login = async (e) => {
+        e.preventDefault()
+        const username = e.target.username.value
+        const password = e.target.password.value
+        if (!username || !password) {
+          alert('⚠️ 아이디와 비밀번호를 입력해주세요!')
+          return
+        }
+        try {
+          const data = await fetch('/login', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ username, password })
+          })
+          if (data.status !== 200) {
+            alert('⚠️ 로그인에 실패했어요!')
+            return
+          }
+          document.querySelector('.login').classList.add('hide')
+          await load()
+        } catch (error) {
+          console.error(error)
+          alert('⚠️ 서버에서 데이터를 가져올 수 없어요!\n' + error.message)
+        }
+      }
+
+      const signup = async (e) => {
+        e.preventDefault()
+        const username = e.target.username.value
+        const password = e.target.password.value
+        const email = e.target.email.value
+        if (!username || !password) {
+          alert('⚠️ 아이디와 비밀번호를 입력해주세요!')
+          return
+        }
+        if (!email) {
+          alert('⚠️ 이메일을 입력해주세요!')
+          return
+        }
+        try {
+          const data = await fetch('/signup', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ username, password, email })
+          })
+          if (data.status !== 201) {
+            alert('⚠️ 회원가입에 실패했어요!')
+            return
+          }
+          alert('✅ 회원가입에 성공했어요!')
+        } catch (error) {
+          console.error(error)
+          alert('⚠️ 서버에서 데이터를 가져올 수 없어요!\n' + error.message)
+        }
+      }
+
+      const toggle = () => {
+        formType = formType === 'login' ? 'signup' : 'login'
+        document.querySelector('button').innerText =
+          formType === 'login' ? '로그인' : '회원가입'
+        document.querySelector('a').innerText =
+          formType === 'login' ? '회원가입 하기' : '로그인 하기'
+        document.querySelector('input[name="email"]').type =
+          formType === 'login' ? 'hidden' : 'email'
+      }
+    </script>
+  </head>
+  <body>
+    <div class="login">
+      <form
+        action="/login"
+        method="POST"
+        onsubmit="formType == 'login' ? login(event) : signup(event)"
+      >
+        <input type="text" name="username" placeholder="아이디" />
+        <input type="password" name="password" placeholder="비밀번호" />
+        <input type="hidden" name="email" placeholder="이메일" />
+        <button type="submit">로그인</button>
+        <a onclick="toggle()">회원가입 하기</a>
+      </form>
+    </div>
+    <div class="wrapper">
+      <h1 class="title">About OS</h1>
+      <section class="card">
+        <h2 class="sub-title">OS Type</h2>
+        <p class="type">Loading...</p>
+        <h2 class="sub-title">Name</h2>
+        <p class="hostname">Loading...</p>
+        <h2 class="sub-title">CPU Number</h2>
+        <p class="cpu-num">Loading... Core</p>
+        <h2 class="sub-title">Total Memory</h2>
+        <p class="total-mem">Loading...</p>
+      </section>
+    </div>
+  </body>
+</html>
