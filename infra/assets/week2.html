@@ -95,7 +95,7 @@
 
       const load = async () => {
         try {
-          const data = await fetch('/os').then((res) => res.json())
+          const data = await fetch('/api/os').then((res) => res.json())
           document.querySelector('.type').innerText = data.type
           document.querySelector('.hostname').innerText = data.hostname
           document.querySelector('.cpu-num').innerText = data.cpu_num
@@ -115,7 +115,7 @@
           return
         }
         try {
-          const data = await fetch('/login', {
+          const data = await fetch('/api/login', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
@@ -148,7 +148,7 @@
           return
         }
         try {
-          const data = await fetch('/signup', {
+          const data = await fetch('/api/signup', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
