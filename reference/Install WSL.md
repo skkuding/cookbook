@@ -47,7 +47,7 @@ wsl --install -d <배포판 이름>
 
 Windows Terminal은 Windows에서 여러 개의 터미널을 편리하게 사용할 수 있게 해주는 앱입니다. WSL을 사용할 때 함께 쓰는 것을 추천합니다. 스토어에서 Windows Terminal을 검색하여 설치할 수 있습니다.
 
-![Windows Terminal](../images/Windows%20Terminal.jpeg)
+{{< figure src="https://store-images.s-microsoft.com/image/apps.28865.13926773940052066.16e93a5b-b25f-4aaf-8a38-77375e237879.78e2aeac-6ede-4855-acb1-79a854b5556d?h=1080" alt="Windows Terminal" >}}
 
 ### File System
 
