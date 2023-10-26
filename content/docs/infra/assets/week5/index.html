@@ -1,0 +1,43 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OS Information</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="login">
+      <form
+        action="/login"
+        method="POST"
+        onsubmit="formType == 'login' ? login(event) : signup(event)"
+      >
+        <input type="text" name="username" placeholder="아이디" />
+        <input type="password" name="password" placeholder="비밀번호" />
+        <input type="hidden" name="email" placeholder="이메일" />
+        <button type="submit">로그인</button>
+        <a onclick="toggle()">회원가입 하기</a>
+      </form>
+    </div>
+    <div class="wrapper">
+      <h1 class="title">About OS</h1>
+      <section class="card">
+        <h2 class="sub-title">OS Type</h2>
+        <p class="type">Loading...</p>
+        <h2 class="sub-title">Name</h2>
+        <p class="hostname">Loading...</p>
+        <h2 class="sub-title">CPU Number</h2>
+        <p class="cpu-num">Loading... Core</p>
+        <h2 class="sub-title">Total Memory</h2>
+        <p class="total-mem">Loading...</p>
+      </section>
+    </div>
+  </body>
+</html>

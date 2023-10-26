@@ -44,6 +44,9 @@ url = "/docs/frontend/1.-html,-css"
 identifier = "community"
 weight = 30
 
+[markup.goldmark.renderer]
+unsafe = true # raw HTML support
+
 [deployment]
 [[deployment.targets]]
 name = 'AWS S3'
