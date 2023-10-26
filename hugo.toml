@@ -1,0 +1,50 @@
+baseURL = "https://study.skkuding.dev"
+languageCode = 'ko-kr'
+title = '스꾸딩 Cookbook'
+
+
+[module]
+[[module.imports]]
+path = "github.com/colinwilson/lotusdocs"
+disable = false
+[[module.imports]]
+path = "github.com/gohugoio/hugo-mod-bootstrap-scss/v5"
+disable = false
+
+[params]
+title = '스꾸딩 Cookbook 🍳'
+description = '성균관대학교 코드당 개발팀 스꾸딩의 개발 레시피'
+images = ['open-graph.png']
+[params.footer]
+copyright = '© :YEAR: SKKUDING'
+
+[params.social]
+github = 'skkuding'
+
+[params.docs]
+repoURL = 'https://github.com/skkuding/cookbook'
+editPage = true
+
+[menu]
+[[menu.primary]]
+name = "Infra"
+url = "/docs/infra/1.-node.js"
+identifier = "docs"
+weight = 10
+
+[[menu.primary]]
+name = "Backend"
+url = "/docs/backend/1.-network"
+identifier = "showcase"
+weight = 20
+
+[[menu.primary]]
+name = "Frontend"
+url = "/docs/frontend/1.-html,-css"
+identifier = "community"
+weight = 30
+
+[deployment]
+[[deployment.targets]]
+name = 'AWS S3'
+URL = 's3://study.skkuding.dev?region=ap-northeast-2'

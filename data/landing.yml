@@ -1,0 +1,107 @@
+# Note: Template blocks require a 'weight' parameter so they're correctly ordered on the landing page
+
+# Hero
+hero:
+  enable: true
+  weight: 10
+
+  # backgroundImage:
+  #   path: 'images/templates/hero'
+  #   filename:
+  #     desktop: 'gradient-desktop.webp'
+  #     mobile: 'gradient-mobile.webp'
+
+  # badge:
+  #   text: v0.0.2
+  #   color: primary # primary, secondary, success, danger, warning, info, light, dark
+  #   pill: false # boolean
+  #   soft: true # boolean
+
+  # titleLogo:
+  #   path: "images/logos"
+  #   filename: "title_logo.png"
+  #   alt: "Lotus Docs Logo"
+  #   height: 80px
+
+  title: 'Cookbook 🍳'
+  subtitle: 스꾸딩의 신입 팀원들을 위해 스꾸딩의 개발 레시피를 모아둔 곳입니다!
+
+  # image:
+  #   path: 'images' # path to image under configured assets directory. default 'images'
+  #   filename: 'lotus_docs_screenshot.png' # filename of your hero image (including file extension)
+  #   alt: 'Lotus Docs Screenshot' # Optional but recommended
+  #   boxShadow: true # default 'false' (excludes .svg images)
+  #   rounded: true # round the image corners? default 'false' (excludes .svg images)
+
+  ctaButton:
+    icon: rocket_launch
+    btnText: 'Get Started'
+    url: '/docs/'
+  # cta2Button:
+  #   icon: construction
+  #   btnText: 'In Development'
+  #   url: 'https://github.com/colinwilson/lotusdocs'
+
+  # info: '**Open Source** MIT Licensed.'
+
+# Features Grid
+features:
+  enable: false
+#   weight: 20
+
+#   title: Why choose Lotus Docs?
+#   subtitle: Lotus Docs is a highly configurable Hugo documentation theme. Yet, with the default configuration you can deploy and publish your documentation site in a matter of minutes. Check out some core features below.
+
+#   items:
+#     - title: Fast
+#       icon: speed
+#       description: 4 x 100's score on Google Lighthouse by default. Lotus Docs removes unused CSS, prefetches asset links, and lazy loads content images.
+
+# Image compare
+image_compare:
+  enable: false
+#   weight: 30
+
+#   title: Customise The Lotus Docs Appearance
+#   subtitle: Much of Lotus Docs' appearance can be customised. Dark mode is optional (enabled by default) and you can choose a Google font that suites you via the config parameters.
+
+#   items:
+#     - title: Dark Mode
+#       config:
+#         {
+#           startingPoint: 50,
+#           addCircle: true,
+#           addCircleBlur: false,
+#           showLabels: true,
+#           labelOptions: { before: 'Dark', after: 'Light', onHover: false }
+#         }
+#       imagePath: 'images/screenshots'
+#       imageBefore: 'lotusdocs_dark_v0.8.webp'
+#       imageAfter: 'lotusdocs_light_v0.8.webp'
+
+#     - title: Custom Fonts
+#       config:
+#         {
+#           controlColor: '#3C4257',
+#           startingPoint: 25,
+#           addCircle: true,
+#           addCircleBlur: false,
+#           showLabels: true,
+#           labelOptions: { before: 'Inter', after: 'Life Saver', onHover: false }
+#         }
+#       imagePath: 'images/screenshots'
+#       imageBefore: 'lotusdocs_google_font_demo_inter_screenshot.webp'
+#       imageAfter: 'lotusdocs_google_font_demo_lifesavers_screenshot.webp'
+
+#     - title: Accent Color
+#       config:
+#         {
+#           startingPoint: 25,
+#           addCircle: true,
+#           addCircleBlur: true,
+#           showLabels: true,
+#           labelOptions: { before: 'Blue', after: 'Cardinal', onHover: false }
+#         }
+#       imagePath: 'images/screenshots'
+#       imageBefore: 'lotusdocs_blue_theme_colour.webp'
+#       imageAfter: 'lotusdocs_cardinal_theme_colour.webp'

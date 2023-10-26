@@ -1,0 +1,86 @@
+html {
+  scroll-padding-top: 80px;
+  background-color: var(--body-bg);
+}
+body {
+  font-family: $font-family-secondary;
+  overflow-x: hidden !important;
+  font-size: $font-size-base;
+  color: var(--body-color);
+  background-color: var(--body-bg);
+}
+@media (max-width: 1199px) {
+  html {
+    scroll-padding-top: 120px;
+  }
+  body {
+    font-size: 0.9rem;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: $font-family-base;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+/* custom rule */
+h1 {
+  font-size: 2.25rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+/* custom rule */
+h2 {
+  font-size: 1.75rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* custom rule */
+h3 {
+  font-size: 1.25rem;
+  margin-top: 1.6rem;
+  margin-bottom: 0.6rem;
+}
+
+/* custom rule */
+h4 {
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+::selection {
+  background: var(--primary);
+  color: var(--white);
+  opacity: 0.9;
+}
+a {
+  text-decoration: none;
+  transition: all 0.5s ease;
+  color: var(--primary);
+
+  &:hover {
+    color: var(--primary-800);
+  }
+}
+p {
+  line-height: 1.6;
+  margin-top: 1.25rem; /* custom rule */
+  margin-bottom: 1.25rem; /* custom rule */
+}
+img {
+  height: auto;
+}
