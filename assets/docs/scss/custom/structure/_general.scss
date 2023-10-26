@@ -1,9 +1,11 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css');
+
 html {
   scroll-padding-top: 80px;
   background-color: var(--body-bg);
 }
 body {
-  font-family: $font-family-secondary;
+  font-family: 'Pretendard', $font-family-secondary;
   overflow-x: hidden !important;
   font-size: $font-size-base;
   color: var(--body-color);
