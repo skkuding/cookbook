@@ -28,19 +28,19 @@ editPage = true
 [menu]
 [[menu.primary]]
 name = "Infra"
-url = "/docs/infra/1.-node.js"
+url = "/docs/infra/"
 identifier = "docs"
 weight = 10
 
 [[menu.primary]]
 name = "Backend"
-url = "/docs/backend/1.-network"
+url = "/docs/backend/"
 identifier = "showcase"
 weight = 20
 
 [[menu.primary]]
 name = "Frontend"
-url = "/docs/frontend/1.-html,-css"
+url = "/docs/frontend/"
 identifier = "community"
 weight = 30
 
