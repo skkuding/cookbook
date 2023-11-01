@@ -83,6 +83,9 @@ p {
   margin-top: 1.25rem; /* custom rule */
   margin-bottom: 1.25rem; /* custom rule */
 }
+.alert > div > p {
+  margin-top: 0; /* custom rule */
+}
 
 /* disabled by custom */
 /* img {
