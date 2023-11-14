@@ -5,8 +5,10 @@ html {
   background-color: var(--body-bg);
 }
 body {
-  --bs-font-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
-    'Helvetica Neue', 'Ubuntu';
+  --bs-font-sans-serif: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo',
+    'Pretendard Variable', Pretendard, Roboto, 'Noto Sans KR', 'Segoe UI',
+    'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    sans-serif;
   font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo',
     'Pretendard Variable', Pretendard, Roboto, 'Noto Sans KR', 'Segoe UI',
     'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
@@ -36,7 +38,10 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: $font-family-base;
+  font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo',
+    'Pretendard Variable', Pretendard, Roboto, 'Noto Sans KR', 'Segoe UI',
+    'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    sans-serif;
   line-height: 1.4;
   font-weight: 600;
 }
