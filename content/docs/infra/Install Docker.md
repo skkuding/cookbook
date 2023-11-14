@@ -1,6 +1,17 @@
-# Docker 설치 가이드
++++
+title = "Docker 설치 가이드"
+description = "Docker를 설치하고 사용하는 방법을 알아봅니다."
+icon = "article"
+weight = 402
++++
 
-## Windows 🪟
+Docker는 컨테이너를 쉽게 쓰도록 도와주는 도구입니다.
+환경 세팅 때 유용한 경우가 많아 자주 사용해요.
+
+원하는 운영체제의 가이드에 따라 설치해주세요!
+
+{{< tabs tabTotal="3">}}
+{{% tab tabName="Windows" %}}
 
 ### 1. WSL 설치
 
@@ -16,7 +27,16 @@ https://docs.docker.com/desktop/install/windows-install/
 
 이후 Docker Desktop 앱을 실행해주세요.
 
-## Mac OS 🍎
+### 3. CLI 확인
+
+WSL에서 아래 명령어를 입력하여 Docker CLI가 정상적으로 설치되었는지 확인합니다.
+
+```bash
+docker --version
+```
+
+{{% /tab %}}
+{{% tab tabName="MacOS" %}}
 
 ### 1. Docker Desktop 설치
 
@@ -25,10 +45,18 @@ https://docs.docker.com/desktop/install/mac-install/
 
 이후 Docker Desktop 앱을 실행해주세요.
 
-## Linux (Ubuntu) 🐧
+### 2. CLI 확인
 
-> Ubuntu 외의 배포판은 공식 문서를 참고해주세요: https://docs.docker.com/engine/install/  
-> 아래 설명은 공식 문서를 참고하여 작성되었습니다.
+아래 명령어를 입력하여 Docker CLI가 정상적으로 설치되었는지 확인합니다.
+
+```bash
+docker --version
+```
+
+{{% /tab %}}
+{{% tab tabName="Linux" %}}
+
+{{< alert context="info" text="이 문서는 Ubuntu를 기준으로 작성되었습니다.<br>Ubuntu 외의 배포판은 공식 문서를 참고해주세요.<br>https://docs.docker.com/engine/install/" />}}
 
 ### 1. 설치 script 실행
 
@@ -53,3 +81,6 @@ sudo usermod -aG docker $USER
 ```bash
 newgrp docker
 ```
+
+{{% /tab %}}
+{{< /tabs >}}

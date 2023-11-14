@@ -1,4 +1,9 @@
-# 무료 도메인 등록 (.tech)
++++
+title = "무료 도메인 등록 (.tech)"
+description = "무료로 .tech 도메인을 등록하고 사용하는 방법을 알아봅니다."
+icon = "article"
+weight = 401
++++
 
 ## TECH 도메인 등록 방법
 

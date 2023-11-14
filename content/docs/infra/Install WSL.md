@@ -1,4 +1,9 @@
-# WSL 설치 가이드
++++
+title = "WSL 설치 가이드"
+description = "Windows에서 Linux를 쉽게 쓸 수 있는 WSL을 설치하는 방법을 알아봅니다."
+icon = "article"
+weight = 403
++++
 
 > 이 가이드는 공식 가이드를 참고해서 풀어 쓴 내용입니다.
 > https://learn.microsoft.com/ko-kr/windows/wsl/install
