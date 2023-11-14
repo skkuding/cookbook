@@ -5,7 +5,10 @@ html {
   background-color: var(--body-bg);
 }
 body {
-  font-family: 'Pretendard', $font-family-secondary;
+  font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo',
+    'Pretendard Variable', Pretendard, Roboto, 'Noto Sans KR', 'Segoe UI',
+    'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    sans-serif;
   overflow-x: hidden !important;
   font-size: $font-size-base;
   color: var(--body-color);
