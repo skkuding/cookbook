@@ -25,6 +25,7 @@ github = 'skkuding'
 repoURL = 'https://github.com/skkuding/cookbook'
 editPage = true
 sidebarIcons = true
+darkMode = true
 
 [menu]
 [[menu.primary]]
