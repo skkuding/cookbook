@@ -16,7 +16,7 @@ title = '스꾸딩 Cookbook 🍳'
 description = '성균관대학교 코드당 개발팀 스꾸딩의 개발 레시피'
 images = ['open-graph.png']
 [params.footer]
-copyright = '© :YEAR: SKKUDING'
+copyright = '© :YEAR: SKKUDING. Built with [**Lotus Docs**](https://github.com/colinwilson/lotusdocs)'
 
 [params.social]
 github = 'skkuding'
