@@ -1,5 +1,4 @@
-# baseURL = "https://study.skkuding.dev"
-baseURL = "https://study.codedang.com"
+baseURL = "https://study.skkuding.dev"
 languageCode = 'ko-kr'
 title = '스꾸딩 Cookbook'
 
