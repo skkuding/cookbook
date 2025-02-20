@@ -1,36 +1,36 @@
-name: Deploy
+# name: Deploy
 
-on:
-  push:
-    branches: [main]
+# on:
+#   push:
+#     branches: [main]
 
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+# concurrency:
+#   group: ${{ github.workflow }}-${{ github.ref }}
+#   cancel-in-progress: true
 
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
+#     permissions:
+#       pages: write
+#       id-token: write
 
-    steps:
-      - uses: actions/checkout@v4
+#     steps:
+#       - uses: actions/checkout@v4
 
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
-        with:
-          hugo-version: 'latest'
-          extended: true
+#       - name: Setup Hugo
+#         uses: peaceiris/actions-hugo@v3
+#         with:
+#           hugo-version: 'latest'
+#           extended: true
 
-      - name: Build
-        run: hugo --minify
+#       - name: Build
+#         run: hugo --minify
 
-      - name: Upload Pages Artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: public
+#       - name: Upload Pages Artifact
+#         uses: actions/upload-pages-artifact@v3
+#         with:
+#           path: public
 
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
+#       - name: Deploy to GitHub Pages
+#         uses: actions/deploy-pages@v4
