@@ -1,5 +1,5 @@
 +++
-title = "부록. Tailwind CSS"
+title = "Appendix. Tailwind CSS"
 description = "CSS 유틸리티 라이브러리인 Tailwind CSS를 알아봅니다."
 icon = "article"
 date = "2023-09-11"
