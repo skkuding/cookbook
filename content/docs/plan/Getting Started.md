@@ -29,15 +29,16 @@ weight = 400
 ## 📅 앞으로 이런 내용들을 배울 거예요!
 
 1. ‘CODEDANG’ 프로젝트에 대한 이해
-2. 타 직군에 대한 이해와 협업 방법
-3. Design Thinking을 활용한 문제 정의와 해결
-4. Agile을 기반으로 한 프로젝트 관리
-5. 협업 툴 (Notion / Figma / Teams) 사용 방법
-6. IA (Information Architecture) 설계
-7. Flow Chart 설계
-8. Figma를 활용한 Wireframe 그리기
-9. 기능 명세서 작성
-10. QA를 위한 Sheet 작성 및 진행 방법
+2. 디자인, 개발팀에 대한 이해와 협업
+3. User Research (Survey, In-Depth Interview)
+4. Design Thinking을 활용한 문제 정의와 해결
+5. Agile 기반 프로젝트 관리 방법
+6. 협업 툴 (Notion / Figma / Teams) 사용 방법
+7. IA (Information Architecture) 설계
+8. Flow Chart 설계
+9. Figma를 활용한 Wireframe 그리기
+10. 기능 명세서 작성
+11. QA를 위한 Sheet 작성 및 진행 방법
 
 ---                            
 
