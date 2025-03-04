@@ -1,5 +1,5 @@
 +++
-title = "부록. Git & Github"
+title = "Appendix. Git & Github"
 description = "코드의 버전 관리를 위해 Git과 Github를 사용해봅니다."
 icon = "article"
 date = "2023-09-11"
