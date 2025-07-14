@@ -4,6 +4,7 @@
 hero:
   enable: true
   weight: 10
+  template: 'hero'
 
   # backgroundImage:
   #   path: 'images/templates/hero'
@@ -45,9 +46,10 @@ hero:
   # info: '**Open Source** MIT Licensed.'
 
 # Features Grid
-features:
+featureGrid:
   enable: true
   weight: 20
+  template: 'feature_grid'
 
   title: 스꾸딩의 스터디는 어떻게 진행되나요?
   subtitle: 신입 팀원들은 프로젝트에 참여하기 전, 한 학기 동안 스터디를 진행해요. 프로젝트에 필요한 기술을 익히고, 실제 프로젝트에 적용해보는 시간을 가질 수 있어요.
@@ -78,9 +80,10 @@ features:
       description: 스터디 중에 궁금한 점이 생기면, Teams 채널에 자유롭게 질문해주세요. 멘토들이 최대한 도와드릴 거예요!
 
 # Image compare
-image_compare:
+imageCompare:
   enable: false
-#   weight: 30
+  weight: 30
+  template: 'image_compare'
 
 #   title: Customise The Lotus Docs Appearance
 #   subtitle: Much of Lotus Docs' appearance can be customised. Dark mode is optional (enabled by default) and you can choose a Google font that suites you via the config parameters.

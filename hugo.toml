@@ -46,5 +46,17 @@ url = "/docs/frontend/"
 identifier = "community"
 weight = 30
 
+[[menu.primary]]
+name = "Plan"
+url = "/docs/plan/"
+identifier = "plan"
+weight = 40
+
+[[menu.primary]]
+name = "Design"
+url = "/docs/design/"
+identifier = "design"
+weight = 50
+
 [markup.goldmark.renderer]
 unsafe = true # raw HTML support
