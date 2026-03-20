@@ -1,104 +1,44 @@
 +++
-title = "무료 도메인 등록 (.tech)"
-description = "무료로 .tech 도메인을 등록하고 사용하는 방법을 알아봅니다."
+title = "무료 도메인 등록"
+description = "무료로 도메인을 등록하고 AWS 리소스에 연결하는 방법을 알아봅니다."
 icon = "article"
-weight = 401
+weight = 403
 +++
 
-## TECH 도메인 등록 방법
+## 방법 1: .tech 도메인 (GitHub Student Developer Pack)
 
-### 1. GitHub Student Developer Pack
+### 1. GitHub Student Developer Pack 등록
 
-아래 링크에서 GitHub Student Developer Pack에 등록합니다.  
+아래 링크에서 GitHub Student Developer Pack에 등록합니다.
 https://education.github.com/pack
 
-### 2. .TECH 등록
+### 2. .TECH 도메인 등록
 
-아래 링크에서 .TECH를 찾아 "Get access by connecting your GitHub account on .TECH"를 클릭하세요.  
-https://education.github.com/pack/offers#offers
+Pack 혜택 목록에서 .TECH를 찾아 GitHub 계정으로 연동하세요.
+https://education.github.com/pack/offers
 
-<p align="center">
-  <img src="../images/free-domain/github-offer.png" width="280">
-</p>
+원하는 도메인 이름을 검색하고 무료로 등록합니다.
 
-### 3. 도메인 선택
+### 3. A 레코드 등록
 
-원하는 도메인 이름을 입력하고 검색한 다음, 'Add to Cart'를 선택하고 'Proceed'를 누르세요. (표시된 금액은 결제되지 않아요)
+.TECH 홈페이지(https://get.tech) > Account > 도메인 선택 > DNS Management에서 A 레코드를 추가합니다.
 
-<p align="center">
-  <img src="../images/free-domain/add-domain.png" width="480">
-</p>
+- Host Name: 비워두기 (루트 도메인)
+- Destination: EC2의 Elastic IP
+- Add Record
 
-### 4. 도메인 할인 (GitHub 연결)
+## 방법 2: nip.io & sslip.io (설정 필요 없음)
 
-GitHub 연결을 선택하고, GitHub 계정으로 로그인하세요. (GitHub Student Developer Pack에 등록한 계정이어야 합니다.) 연결이 완료되면 'Place Order'를 누르세요.
+도메인 등록 없이 바로 사용할 수 있는 DNS 서비스예요. IP 주소를 도메인처럼 사용할 수 있습니다.
 
-<p align="center">
-  <img src="../images/free-domain/shopping-cart.png" width="480">
-</p>
+```
+# IP가 54.180.123.45라면:
+54.180.123.45.nip.io → 54.180.123.45로 해석됨
+app.54.180.123.45.nip.io → 동일
+```
 
-### 5. 회원가입
+별도의 설정이 필요 없어서 빠르게 테스트하기 좋아요. 다만 프로덕션에는 부적합합니다.
 
-표시된 정보를 입력하고, 'Create Account'를 누르세요.
+## 접속 시 주의사항
 
-<p align="center">
-  <img src="../images/free-domain/create-account.png" width="480">
-</p>
-
-### 6. 도메인 등록 완료
-
-아래와 같은 창이 표시되면 등록이 완료됩니다!
-
-<p align="center">
-  <img src="../images/free-domain/order-complete.png" width="480">
-</p>
-
-## IP 주소 등록 (A record)
-
-### 1. TECH domain 홈페이지
-
-[TECH domain 홈페이지](https://get.tech)로 이동해서 Account를 클릭하세요. 로그인되어있지 않다면 로그인도 진행해주세요.
-
-<p align="center">
-  <img src="../images/free-domain/home.png" width="480">
-</p>
-
-### 2. Account 페이지
-
-Jump to Domain 칸에 본인의 도메인을 입력해주세요.
-
-<p align="center">
-  <img src="../images/free-domain/account.png" width="480">
-</p>
-
-### 3. 도메인 관리 페이지
-
-도메인 관리 페이지에서 아래로 스크롤하여 DNS 관리 페이지로 이동합니다. 'Manage DNS'를 클릭하세요.
-
-<p align="center">
-  <img src="../images/free-domain/domain-page.png" width="480">
-</p>
-
-### 4. DNS 관리 페이지
-
-DNS record들을 확인할 수 있습니다. (예: \<record-name>.dotoleeoak.tech) A record는 IPv4 주소를 등록할 수 있는 record입니다. 'Add A record'를 클릭하세요.
-
-<p align="center">
-  <img src="../images/free-domain/dns-management.png" width="480">
-</p>
-
-### 5. A record 등록
-
-Root 도메인(\<domain-name>.tech)을 등록하기 위해 Host Name은 빈 칸으로 둡니다. Destination에 원하는 IP 주소(Elastic IP 등)를 등록하고, 'Add Record'를 누르세요.
-
-<p align="center">
-  <img src="../images/free-domain/add-a-record.png" width="480">
-</p>
-
-### 6. 동작 확인
-
-도메인이 잘 동작하는지 확인합니다.
-
-<p align="center">
-  <img src="../images/free-domain/final.png" width="480">
-</p>
+{{< alert context="warning" text="브라우저에 IP나 도메인을 입력하면 기본적으로 HTTPS 연결을 시도합니다. 이번 실습에서는 SSL 인증서를 설정하지 않으므로, 반드시 앞에 **http://** 를 붙여서 접속하세요!" />}}

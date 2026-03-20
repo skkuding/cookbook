@@ -1,5 +1,5 @@
 +++
-title = "Observability (1)"
+title = "Observability"
 description = "모니터링 시스템의 데이터 '수집/처리'에 대해 알아봅니다."
 icon = "article"
 date = "2025-07-23"
