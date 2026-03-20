@@ -2,7 +2,7 @@
 title = "WSL 설치 가이드"
 description = "Windows에서 Linux를 쉽게 쓸 수 있는 WSL을 설치하는 방법을 알아봅니다."
 icon = "article"
-weight = 403
+weight = 401
 +++
 
 > 이 가이드는 공식 가이드를 참고해서 풀어 쓴 내용입니다.
@@ -34,14 +34,12 @@ wsl --install
 
 ```powershell
 wsl --list --online
-# 또는
-wsl -l -o
 ```
 
-다음 명령어로 원하는 배포판을 설치합니다.
+다음 명령어로 Ubuntu를 설치합니다.
 
 ```powershell
-wsl --install -d <배포판 이름>
+wsl --install -d Ubuntu
 ```
 
 이후 `wsl` 명령어를 입력하면 Linux을 사용할 수 있습니다.
@@ -50,7 +48,7 @@ wsl --install -d <배포판 이름>
 
 ### Windows Terminal
 
-Windows Terminal은 Windows에서 여러 개의 터미널을 편리하게 사용할 수 있게 해주는 앱입니다. WSL을 사용할 때 함께 쓰는 것을 추천합니다. 스토어에서 Windows Terminal을 검색하여 설치할 수 있습니다.
+Windows Terminal은 Windows에서 여러 개의 터미널을 편리하게 사용할 수 있게 해주는 앱입니다. WSL을 사용할 때 함께 쓰는 것을 추천합니다. Microsoft Store에서 Windows Terminal을 검색하여 설치할 수 있습니다.
 
 {{< figure src="https://store-images.s-microsoft.com/image/apps.28865.13926773940052066.16e93a5b-b25f-4aaf-8a38-77375e237879.78e2aeac-6ede-4855-acb1-79a854b5556d?h=1080" alt="Windows Terminal" >}}
 
@@ -58,4 +56,4 @@ Windows Terminal은 Windows에서 여러 개의 터미널을 편리하게 사용
 
 WSL에서는 Windows의 파일 시스템에 접근할 수 있습니다. Windows의 파일 시스템은 `/mnt` 디렉토리에 마운트되어 있습니다. 예를 들어, `C:\Users\skku\Downloads` 디렉토리는 `/mnt/c/Users/skku/Downloads`에 위치합니다.
 
-하지만 작업 파일 등 많이 쓰이는 파일은 WSL의 파일 시스템(예: `/home/skku`)에 저장하는 것을 추천합니다. WSL의 파일 시스템은 Windows의 파일 시스템에 비해 속도가 빠르고, Windows 파일 시스템에 접근할 때 발생하는 문제를 피할 수 있습니다.
+하지만 작업 파일 등 많이 쓰이는 파일은 WSL의 파일 시스템(예: `/home/skku`)에 저장하는 것을 추천합니다. WSL에서 윈도우 파일 시스템을 사용하면 대단히 느려, 작업을 할 때 훨씬 느려집니다.
