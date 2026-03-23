@@ -10,12 +10,12 @@ weight = 300
 한 학기 동안 아래와 같은 내용을 배울 거예요.
 
 - Linux 서버 관리와 네트워크 기초
-- 간단한 서버 제작 (Node.js, Express)
-- 데이터베이스 연동 (PostgreSQL)
+- 간단한 서버 제작 (Node.js)
 - 컨테이너 기반 가상화 (Docker, Docker Compose)
 - 클라우드 서비스 (AWS — IAM, VPC, EC2, S3, CloudFront, ALB)
 - 컨테이너 오케스트레이션 (Kubernetes)
-- 인프라 프로비저닝과 CI/CD (Terraform, GitHub Actions)
+- 인프라 프로비저닝 (Terraform)
+- CI/CD (GitHub Actions)
 
 Linux와 네트워크 기초를 다진 뒤, 간단한 서버를 만들어보고, Docker로 컨테이너화한 다음 AWS에 배포할 거예요. Kubernetes로 오케스트레이션하고, Terraform으로 인프라를 코드화하고, GitHub Actions로 전 과정을 자동화할 거예요.
 
@@ -23,13 +23,13 @@ Linux와 네트워크 기초를 다진 뒤, 간단한 서버를 만들어보고,
 
 ```mermaid
 flowchart LR
-  A["1. Linux + HTTP"] --> B["2. 네트워크"]
-  B --> C["3. Express + DB"]
-  C --> D["4. Docker"]
-  D --> E["5. AWS 기초"]
-  E --> F["6. AWS 심화"]
-  F --> G["7. Kubernetes"]
-  G --> H["8. Terraform + CI/CD"]
+  A["1. Linux + HTTP + Node.js"] --> B["2. 네트워크"]
+  B --> C["3. Docker"]
+  C --> D["4. AWS 기초"]
+  D --> E["5. AWS 심화"]
+  E --> F["6. Kubernetes"]
+  F --> G["7. Terraform"]
+  G --> H["8. GitHub Actions"]
 ```
 
 ## 스터디 방식
@@ -41,9 +41,9 @@ flowchart LR
 
 ## 환경
 
-- **실습 서버:** 팀에서 Ubuntu 서버를 제공해요. SSH로 접속해서 사용합니다.
-- **로컬 환경:** 본인 노트북에서도 개발해요. Windows는 WSL 설치를 권장합니다.
-- **AWS:** Free Tier 계정을 각자 생성해요. (Session 5 전에 미리 만들어두세요!)
+- **실습 서버:** Session 1~2에서는 팀에서 Ubuntu 서버를 제공해요. SSH로 접속해서 사용합니다.
+- **로컬 환경:** Session 3부터는 본인 노트북에서 개발해요. Windows는 WSL 또는 듀얼 부팅을 권장합니다.
+- **AWS:** Free Tier 계정을 각자 생성해요. (Session 4 전에 미리 만들어두세요!)
 
 더 많은 내용을 배워보고 싶은 분들은 아래의 DevOps Roadmap을 참고해보세요.
 https://roadmap.sh/devops

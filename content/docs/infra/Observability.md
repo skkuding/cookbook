@@ -7,16 +7,16 @@ lastmod = "2025-07-23"
 weight = 391
 +++
 
-📖 세션 목표: 애플리케이션과 인프라에서 발생하는 모든 텔레메트리 데이터(메트릭, 로그, 트레이스)를 수집하고, OTEL Collector를 통해 각각의 전문 저장소로 전달하는 파이프라인을 구축한다.
+세션 목표: 애플리케이션과 인프라에서 발생하는 모든 텔레메트리 데이터(메트릭, 로그, 트레이스)를 수집하고, OTEL Collector를 통해 각각의 전문 저장소로 전달하는 파이프라인을 구축한다.
 
-## 공부할 내용 📚
+## 공부할 내용
 
 ### 1. OpenTelemetry(OTel)
 
-OpenTelemetry는 애플리케이션과 인프라에서 발생하는 텔레메트리 데이터 데이터를 수집하고 처리하는 오픈 소스 프로젝트입니다. OTel은 다양한 언어와 플랫폼을 지원하며, 데이터 수집을 **표준화**하여 모니터링과 관측 가능성을 향상시킵니다.
+OpenTelemetry는 애플리케이션과 인프라에서 발생하는 텔레메트리 데이터를 수집하고 처리하는 오픈 소스 프로젝트예요. OTel은 다양한 언어와 플랫폼을 지원하며, 데이터 수집을 **표준화**하여 모니터링과 관측 가능성을 향상시켜요.
 
-- **OpenTelemetry란?**: OpenTelemetry의 개념과 등장 배경을 이해합니다.
-- **OTel의 구성 요소**: OTel의 주요 구성 요소(Collector, SDK, API 등)를 이해합니다.
+- **OpenTelemetry란?**: OpenTelemetry의 개념과 등장 배경을 이해해요.
+- **OTel의 구성 요소**: OTel의 주요 구성 요소(Collector, SDK, API 등)를 이해해요.
 
 #### 참고 자료
 - **[OpenTelemetry in 180 seconds](https://youtu.be/vnE_DfNB97w?si=Z7txE1RqcUgluh8X)**: OpenTelemetry부터 OTel Collector의 개념과 필요성을 간단하게 설명하는 영상입니다.
@@ -25,10 +25,10 @@ OpenTelemetry는 애플리케이션과 인프라에서 발생하는 텔레메트
 
 ### 2. 텔레메트리 데이터 소스 심층 탐구
 
-애플리케이션에서는 메트릭, 로그, 트레이스 등 다양한 텔레메트리 데이터를 생성합니다. 이 데이터들은 시스템의 상태를 모니터링하고, 문제를 해결하는 데 중요한 역할을 합니다.
+애플리케이션에서는 메트릭, 로그, 트레이스 등 다양한 텔레메트리 데이터를 생성해요. 이 데이터들은 시스템의 상태를 모니터링하고, 문제를 해결하는 데 중요한 역할을 해요.
 
-- **데이터 종류**: 각 텔레메트리 데이터의 종류(메트릭, 로그, 트레이스)와 그 역할을 이해합니다.
-- **수집 방법**: 코드 변경 없이 수집하는 방법(Zero-code solutions)과 코드 변경을 통해 수집하는 방법(Code-based solutions)을 이해합니다.
+- **데이터 종류**: 각 텔레메트리 데이터의 종류(메트릭, 로그, 트레이스)와 그 역할을 이해해요.
+- **수집 방법**: 코드 변경 없이 수집하는 방법(Zero-code solutions)과 코드 변경을 통해 수집하는 방법(Code-based solutions)을 이해해요.
 
 #### 참고 자료
 - **[Elastic "What is Telemetry Data?"](https://www.elastic.co/kr/what-is/telemetry-data/#types-of-telemetry-data)**: 텔레메트리 데이터의 종류와 수집 방법에 대한 설명입니다.
@@ -36,7 +36,7 @@ OpenTelemetry는 애플리케이션과 인프라에서 발생하는 텔레메트
 
 ### 3. 중앙 허브, OTEL Collector
 
-모든 텔레메트리 데이터의 중앙 허브 역할을 하는 OTEL Collector에 대해 알아봅니다.
+모든 텔레메트리 데이터의 중앙 허브 역할을 하는 OTEL Collector에 대해 알아봐요.
 
 - OTEL Collector의 역할과 필요성을 알아봐요.
 - OTEL Collector의 아키텍처를 알아봐요. (Receivers, Processors, Exporters)
@@ -49,7 +49,7 @@ OpenTelemetry는 애플리케이션과 인프라에서 발생하는 텔레메트
 
 ### 4. 역할별 전문 저장소(백엔드) 소개
 
-텔레메트리 데이터는 종류별로 전문 저장소에 저장됩니다. 각 데이터 유형에 맞는 저장소를 알아봅시다.
+텔레메트리 데이터는 종류별로 전문 저장소에 저장돼요. 각 데이터 유형에 맞는 저장소를 알아봐요.
 
 - 텔레메트리 데이터의 종류 별로 어떤 저장소가 사용되는지 알아봐요. 
   - 메트릭: Prometheus
@@ -66,27 +66,27 @@ OpenTelemetry는 애플리케이션과 인프라에서 발생하는 텔레메트
 - [\[Grafana Loki\]란? 개념부터 설치까지](https://wlsdn3004.tistory.com/48)
 - [\[Grafana Tempo\]란? 개념부터 설치까지](https://wlsdn3004.tistory.com/49)
 
-## 프로젝트 실습 🎈(작성 중)
+## 프로젝트 실습 (작성 중)
 OTel SDK를 사용하여 애플리케이션에서 텔레메트리 데이터를 수집하고, OTEL Collector를 통해 전문 저장소로 전달하는 파이프라인을 구축해볼 거예요.
 
-### 모니터링 대상 어플리케이션에 OTel SDK 코드 삽입
+### 모니터링 대상 애플리케이션에 OTel SDK 코드 삽입
 
-어플리케이션 코드에 OTel SDK를 삽입하여 텔레메트리 데이터를 수집합니다. 예를 들어, Node.js 애플리케이션에서는 `@opentelemetry/sdk-node` 패키지를 사용하여 메트릭, 로그, 트레이스를 수집할 수 있습니다.
+애플리케이션 코드에 OTel SDK를 삽입하여 텔레메트리 데이터를 수집해요. 예를 들어, Node.js 애플리케이션에서는 `@opentelemetry/sdk-node` 패키지를 사용하여 메트릭, 로그, 트레이스를 수집할 수 있어요.
 
-- 핵심 패키지인 [@opentelemetry/sdk-node](https://www.npmjs.com/package/@opentelemetry/sdk-node)를 설치합니다.
-- [@opentelemetry/resources](https://www.npmjs.com/package/@opentelemetry/resources)를 활용하여 모니터링 대상 어플리케이션에 대한 정보를 설정합니다.
-- 이 때 [@opentelemetry/semantic-conventions](https://www.npmjs.com/package/@opentelemetry/semantic-conventions)를 사용하여 표준화된 속성을 사용합니다.
-- (선택 사항) [@opentelemetry/instrumentation](https://www.npmjs.com/package/@opentelemetry/instrumentation) 패키지를 사용하여 자동 계측을 설정합니다.
+- 핵심 패키지인 [@opentelemetry/sdk-node](https://www.npmjs.com/package/@opentelemetry/sdk-node)를 설치해요.
+- [@opentelemetry/resources](https://www.npmjs.com/package/@opentelemetry/resources)를 활용하여 모니터링 대상 애플리케이션에 대한 정보를 설정해요.
+- 이 때 [@opentelemetry/semantic-conventions](https://www.npmjs.com/package/@opentelemetry/semantic-conventions)를 사용하여 표준화된 속성을 사용해요.
+- (선택 사항) [@opentelemetry/instrumentation](https://www.npmjs.com/package/@opentelemetry/instrumentation) 패키지를 사용하여 자동 계측을 설정해요.
 
 ### Collector 및 백엔드 설정
 
-OTel Collector와 여러 저장소 처럼 많은 서비스들을 설정해야 하기 때문에 이전에 배운 Docker Compose를 사용하여 각 서비스를 컨테이너로 실행합니다.
+OTel Collector와 여러 저장소처럼 많은 서비스들을 설정해야 하기 때문에 이전에 배운 Docker Compose를 사용하여 각 서비스를 컨테이너로 실행해요.
 
 
 #### OTel Collector 설정
 
-OTel Collector를 설정하여 OTel SDK에서 보낸 텔레메트리 데이터를 수집합니다.
+OTel Collector를 설정하여 OTel SDK에서 보낸 텔레메트리 데이터를 수집해요.
 
 #### Loki, Prometheus, Tempo 설정
 
-로그, 메트릭, 트레이스 데이터 모두를 수집하는 것은 양이 방대하기 때문에 이번 실습에서는 로그만 수집해볼거에요.
+로그, 메트릭, 트레이스 데이터 모두를 수집하는 것은 양이 방대하기 때문에 이번 실습에서는 로그만 수집해볼 거예요.

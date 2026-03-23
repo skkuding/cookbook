@@ -20,8 +20,7 @@ WSL이 설치되지 않았다면, [WSL 설치 가이드](./Install%20WSL.md)를 
 아래 링크에서 Docker Desktop for Windows를 다운로드하여 설치합니다.
 https://docs.docker.com/desktop/install/windows-install/
 
-> [!WARNING]
-> 설치 시 Hyper-V 대신 WSL 2를 사용하도록 설정해야 합니다!
+{{< alert context="warning" text="설치 시 Hyper-V 대신 WSL 2를 사용하도록 설정해야 합니다!" />}}
 
 이후 Docker Desktop 앱을 실행해주세요.
 
