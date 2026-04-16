@@ -28,11 +28,14 @@ data "aws_route53_zone" "skkuding" {
   name = "skkuding.dev"
 }
 
-data "aws_acm_certificate" "skkuding" {
-  provider    = aws.us_east_1
-  domain      = "skkuding.dev"
-  statuses    = ["ISSUED"]
-  most_recent = true
+data "terraform_remote_state" "website" {
+  backend = "s3"
+
+  config = {
+    bucket = "codedang-tf-state"
+    key    = "terraform/website.tfstate"
+    region = "ap-northeast-2"
+  }
 }
 
 data "aws_iam_openid_connect_provider" "github" {

@@ -32,7 +32,7 @@ resource "aws_cloudfront_distribution" "this" {
   }
 
   viewer_certificate {
-    acm_certificate_arn      = data.aws_acm_certificate.skkuding.arn
+    acm_certificate_arn      = data.terraform_remote_state.website.outputs.acm_certificate_arn
     ssl_support_method       = "sni-only"
     minimum_protocol_version = "TLSv1.2_2021"
   }
