@@ -9,11 +9,12 @@ weight = 100
 
 한 학기 동안 아래 부분들을 배워나갈 예정이에요. ☺️
 
-- Node.js와 기본적인 javascript 문법
-- Typescript의 개요 및 문법
-- Javascript 기반의 웹 프레임워크 (Express.js, NestJS)
-- Prisma를 활용한 DB 관리
-- GraphQL
+- HTTP/REST 기초
+- Node.js와 JavaScript/TypeScript
+- NestJS를 활용한 API 개발
+- PostgreSQL과 Prisma를 활용한 데이터베이스 관리
+- GraphQL과 코드당 백엔드 아키텍처
+- 코드당의 개발 및 협업 방식
 
 ## 스터디 방식 📗
 
