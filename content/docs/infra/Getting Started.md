@@ -23,7 +23,8 @@ Linux와 네트워크 기초를 다진 뒤, 간단한 서버를 만들어보고,
 
 ```mermaid
 flowchart LR
-  A["1. Linux + HTTP + Node.js"] --> B["2. 네트워크"]
+  Z["0. Git + GitHub"] --> A["1. Linux + HTTP + Node.js"]
+  A --> B["2. 네트워크"]
   B --> C["3. Docker"]
   C --> D["4. AWS 기초"]
   D --> E["5. AWS 심화"]
@@ -38,6 +39,7 @@ flowchart LR
 - 매 세션마다 **공부할 내용**과 **프로젝트 실습**이 있어요.
 - 공부할 내용은 참고 자료를 제공하지만, 자유롭게 검색해서 공부해도 괜찮아요.
 - 프로젝트 실습은 **하나의 앱**을 매주 발전시키는 형태로 진행돼요. Session 1에서 만든 서버가 Session 8에서는 Kubernetes 위에서 CI/CD로 자동 배포됩니다.
+- 0주차에 만든 개인 GitHub 저장소의 `study` 브랜치에 매주 실습을 commit하고 push해요. 마지막 주에는 `study`에서 `main`으로 Pull Request를 올려 전체 과정을 마무리합니다.
 
 ## 환경
 
